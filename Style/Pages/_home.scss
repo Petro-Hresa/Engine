@@ -1,0 +1,1115 @@
+//Global style
+html, body {
+	height: auto;
+	min-width: 320px;
+	overflow: hidden;
+	overflow-y: auto;
+}
+
+body {
+	background: #121212;
+	font-family: 'Open Sans', sans-serif;;
+}
+
+//class-container
+.container {
+
+	@media (min-width: $breakpointMD) {
+		padding: 0 41px;
+	}
+
+	@media (min-width: $breakpointLG) and(max-width: 1414px) {
+		padding: 0;
+		max-width: 859px;
+	}
+
+	@media (min-width: 1700px) {
+		padding: 0;
+		max-width: 1414px;
+	}
+
+}
+
+//class-row
+.row {
+	margin: 0;
+}
+
+//**************Header**********
+header {
+	color: $colorTextHead;
+	border-bottom: 12px solid $colorRed;
+
+	//======header section upper======
+	.upper {
+		display: flex;
+		padding: 25px 0;
+		align-items: center;
+		flex-direction: column;
+
+		@media (min-width: $breakpointMD) {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		//----header section upper contacts----
+		&__box_contacts {
+			font-weight: bold;
+			line-height: 30px;
+			letter-spacing: 1px;
+			padding: 0 23px 0 0;
+			justify-content: flex-start;
+
+			@media (min-width: $breakpointMD) {
+				order: 2;
+				letter-spacing: 2px;
+				padding: 28px 6px 0 0;
+			}
+
+			@media(min-width: $breakpointLG) {
+				font-size: 20px;
+				padding: 11px 0 0 0;
+				letter-spacing: 1.5px;
+			}
+
+			@media(min-width: $breakpointXL) {
+				padding: 2px 30px 0 0;
+			}
+
+			div {
+				display: flex;
+				cursor: pointer;
+				align-items: center;
+
+				@media(min-width: $breakpointLG) {
+					padding: 5px 0;
+				}
+
+			}
+
+			i {
+				font-size: 23px;
+
+				color: $colorRed;
+				padding: 4px 15px 3px 0;
+
+				@media (min-width: $breakpointMD) {
+					padding: 5px 16px 3px 0;
+				}
+
+				@media(min-width: $breakpointLG) {
+					font-size: 26px;
+					padding: 5px 20px 3px 0;
+				}
+
+			}
+
+		}
+
+		//----header section upper logo----
+		&__box_logo {
+			padding: 38px 2px 0 0;
+
+			@media (min-width: $breakpointMD) {
+				padding: 21px 0 0 15px;
+			}
+
+			@media(min-width: $breakpointLG) {
+				padding: 0 0 4px 0;
+			}
+
+			@media(min-width: $breakpointXL) {
+				padding: 0 0 20px 0;
+			}
+
+		}
+
+	}
+
+	//======header section lower======
+	.lower {
+		padding: 14px 0 10px 0;
+
+		@media (min-width: $breakpointMD) {
+			padding: 40px 0 0 14px;
+		}
+
+		@media (min-width: $breakpointLG) {
+			padding: 33px 0 0 0;
+		}
+
+		@media (min-width: $breakpointXL) {
+			padding: 173px 0 0 0;
+		}
+
+		//----header section lower title---
+		&__title {
+			font-size: 22px;
+			font-weight: 700;
+			line-height: 27px;
+			letter-spacing: .6px;
+			text-transform: uppercase;
+
+			@media (min-width: $breakpointMD) {
+				font-size: 31px;
+				line-height: 36px;
+			}
+
+			@media (min-width: $breakpointLG) {
+				font-size: 34px;
+				line-height: 41px;
+				letter-spacing: 1px;
+			}
+
+			@media (min-width: $breakpointXL) {
+				font-size: 48px;
+				line-height: 52px;
+			}
+
+			span {
+				font-weight: 300;
+				color: $colorSubtitle;
+
+				@media (min-width: $breakpointXL) {
+					letter-spacing: .1px;
+				}
+
+			}
+
+		}
+
+		//----header section lower img----
+		&__wrap-img {
+			width: 100%;
+			height: 236px;
+			position: relative;
+
+			@media (min-width: 460px) {
+				display: flex;
+				justify-content: flex-end;
+			}
+
+			@media (min-width: $breakpointMD) {
+				height: 434px;
+			}
+
+			@media (min-width: $breakpointLG) {
+				height: 535px;
+			}
+
+			@media (min-width: 1700px) {
+				height: 450px;
+			}
+
+			@media (min-width: $breakpointXL) {
+				height: 230px;
+			}
+
+			&__img {
+				bottom: 12px;
+				width: 403px;
+				height: 233px;
+				position: absolute;
+
+				@media (min-width: 0px) and(max-width: 460px) {
+					left: 12px;
+				}
+
+				@media (min-width: $breakpointMD) {
+					width: 812px;
+					height: 467px;
+					bottom: 30px;
+					left: 27px;
+				}
+
+				@media (min-width: 992px) {
+					left: 100px;
+				}
+
+				@media (min-width: $breakpointLG) {
+					width: 1015px;
+					height: 585px;
+					bottom: 37px;
+					left: 50px;
+				}
+
+				@media (min-width: 1700px) {
+					left: 300px;
+				}
+
+				@media (min-width: $breakpointXL) {
+					left: 600px;
+				}
+			}
+		}
+	}
+}
+
+
+//*************Main*************
+main {
+	//Main  block upper
+	.upper {
+		border-bottom: 12px solid $colorRed;
+		//======Main section list======
+		.list {
+			padding: 28px 0;
+
+			@media (min-width: $breakpointMD) {
+				padding: 38px 0;
+			}
+
+			//----------list title------------
+			&__title {
+				font-size: 27px;
+				color: $colorRed;
+				font-weight: bold;
+				margin-bottom: 4px;
+				padding: 0 5px;
+
+				@media (min-width: $breakpointMD) {
+					font-size: 37px;
+					padding: 0 0 4px 14px;
+					letter-spacing: 2px;
+				}
+
+				@media (min-width: $breakpointLG) {
+					font-size: 45px;
+					padding: 0 0 0 3px;
+					letter-spacing: 2px;
+				}
+
+				@media (min-width: $breakpointXL) {
+					margin-top: 17px;
+				}
+
+			}
+
+			&__subtitle {
+				letter-spacing: .4px;
+				color: $colorSubtitle;
+				padding: 0 5px;
+
+				@media (min-width: $breakpointMD) {
+					font-size: 20px;
+				}
+
+				@media (min-width: $breakpointLG) {
+					font-size: 25px;
+				}
+
+			}
+
+
+			//---------list item---------
+			&__item {
+				padding: 0;
+				color: $colorRed;
+
+				@media (min-width: $breakpointMD) {
+					padding: 15px 0 0 0;
+				}
+
+				@media (min-width: $breakpointLG) {
+					display: flex;
+				}
+
+
+				.inner__item {
+					height: 48px;
+					display: flex;
+					align-items: center;
+					box-shadow: 0 1px 0 0 rgba(62, 69, 81, 0.50);
+
+					@media (min-width: $breakpointMD) {
+						height: 65px;
+					}
+					@media (min-width: $breakpointXL) {
+						height: 107px;
+					}
+
+
+					&_number {
+						font-size: 35px;
+						font-weight: bold;
+						margin: 0 25px 0 9%;
+						color: $colorTextHead;
+						text-shadow: 2px 1px 1px $colorRed;
+						display: flex;
+						justify-content: center;
+
+						@media (min-width: $breakpointMD) {
+							font-size: 50px;
+							margin: 0 50px 0 6%;
+						}
+						@media (min-width: $breakpointLG) {
+							margin: 0 20px 0 0;
+						}
+						@media (min-width: $breakpointXL) {
+							font-size: 80px;
+							margin: 0 37px 0 0;
+						}
+
+					}
+
+					&_text {
+						max-width: 300px;
+						line-height: 17px;
+						font-size: 14px;
+
+						@media (min-width: $breakpointMD) {
+							font-size: 23px;
+							max-width: 100%;
+						}
+
+						@media (min-width: $breakpointLG) {
+							font-size: 18px;
+							padding: 0 15px 0 0;
+							line-height: 25px;
+						}
+						@media (min-width: $breakpointXL) {
+							font-size: 29px;
+							line-height: 30px;
+						}
+
+						&_word {
+							font-weight: bold;
+							padding-right: 4px;
+						}
+
+					}
+
+				}
+
+				.box-left,
+				.box-right {
+					@media (min-width: $breakpointLG) {
+						width: 100%;
+					}
+
+					:nth-child(5) {
+						@media (min-width: $breakpointLG) {
+							box-shadow: none;
+						}
+
+					}
+				}
+
+				//.box-right
+				.box-right {
+					@media (min-width: $breakpointLG) {
+						border-left: 1px solid rgba(62, 69, 81, 0.50);
+					}
+
+					* {
+						.inner__item {
+							&_number {
+								@media (min-width: $breakpointLG) {
+									margin: 0 20px 0 19%;
+								}
+
+								@media (min-width: $breakpointXL) {
+									margin: 0 35px 0 20%;
+								}
+							}
+						}
+					}
+
+
+					:nth-child(5) {
+						.inner__item {
+							@media (min-width: $breakpointLG) {
+								display: flex;
+								justify-content: flex-start;
+							}
+
+							&_number {
+								position: relative;
+								margin-right: 5px;
+								left: -20px;
+
+								@media (min-width: $breakpointMD) {
+									margin-right: 20px;
+									left: -29px;
+								}
+
+								@media (min-width: $breakpointLG) {
+									margin-right: -10px;
+								}
+
+								@media (min-width: $breakpointXL) {
+									left: -45px;
+								}
+
+							}
+
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	//======Main section carousel======
+	.slider {
+		@media (min-width: $breakpointMD) {
+			display: flex;
+			margin: 54px 0 90px 0;
+		}
+		@media (min-width: $breakpointLG) {
+			margin: 40px 0 45px 0;
+		}
+
+		@media (min-width: $breakpointXL) {
+			margin: 143px 10px 87px 10px;
+		}
+
+		.slick-list {
+			overflow: hidden;
+		}
+
+		.slick-track {
+			display: flex;
+		}
+
+		.slick-arrow {
+			z-index: 10;
+			font-size: 0;
+			border: none;
+			outline: none;
+		}
+
+		.slick-disabled {
+			opacity: 0;
+			pointer-events: none;
+		}
+
+		//----Wrapper first slider-----
+		.wrap__first-slider {
+			@media (min-width: $breakpointMD) {
+				min-width: 520px;
+			}
+			//First slider
+			.first-slider {
+
+				.slick-track {
+
+					.slick-slide {
+						outline: none;
+						height: 566px;
+						position: relative;
+						@include positionImg(center, no-repeat, cover);
+						@media (min-width: $breakpointMD) {
+							height: 449px;
+						}
+						@media (min-width: $breakpointLG) {
+							height: 463px;
+						}
+						@media (min-width: 1699px) {
+							height: 550px;
+						}
+						@media (min-width: $breakpointXL) {
+							height: 709px;
+						}
+
+						.description {
+							bottom: 0;
+							width: 100%;
+							position: absolute;
+							padding: 20px 30px 8px 30px;
+							background-color: rgba(0, 0, 0, .50);
+							@media (min-width: $breakpointMD) {
+								padding: 7px 0 0 56px;
+							}
+							@media (min-width: 1699px) {
+								font-size: 25px;
+							}
+							@media (min-width: $breakpointXL) {
+								font-size: 30px;
+							}
+
+							&__title {
+								font-weight: bold;
+								margin-bottom: 0;
+								color: $colorRed;
+							}
+
+							&__subtitle {
+								color: $colorTextHead;
+							}
+						}
+					}
+				}
+			}
+
+			.first-slider__btn {
+				height: 132px;
+				display: flex;
+				justify-content: space-between;
+				@media(min-width: $breakpointMD) {
+					display: none;
+				}
+
+				.slick-arrow {
+					width: 50px;
+				}
+
+
+				.slick-arrow.slick-prev {
+					background: url('../../Images/arrow-left.svg') no-repeat;
+					background-size: 20px;
+					background-position: center left;
+				}
+
+				.slick-arrow.slick-next {
+					background: url("../../Images/arrow-right.svg") no-repeat center;
+					background-size: 20px;
+					background-position: center right;
+				}
+			}
+		}
+
+		//----Wrapper Second slider-----
+		.wrap__second-slider {
+			display: none;
+			@media(min-width: $breakpointMD) {
+				display: block;
+			}
+
+			//Second slider
+			.second-slider {
+				width: 166px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				@media (min-width: $breakpointLG) {
+					min-width: 215px;
+				}
+				@media (min-width: 1699px) {
+					min-width: 300px;
+				}
+				@media (min-width: $breakpointXL) {
+					min-width: 355px;
+				}
+
+				.slick-track {
+					flex-direction: column;
+					justify-content: center;
+					@media (min-width: $breakpointMD) and (max-width: 1695px) {
+						max-height: 516px;
+					}
+
+					.slick-slide {
+						width: 100%;
+						opacity: .5;
+						height: 75px;
+						margin: 10px;
+						outline: none;
+						cursor: pointer;
+						border-radius: 5px;
+						@include positionImg(center, no-repeat, cover);
+						@media (min-width: $breakpointLG) {
+							min-height: 76px;
+							margin: 5px 15px;
+						}
+						@media (min-width: 1699px) {
+							min-height: 97px;
+						}
+						@media (min-width: $breakpointXL) {
+							min-height: 130px;
+							margin: 5px 25px;
+						}
+					}
+
+					.slick-current {
+						opacity: 1;
+						border-radius: 5px;
+						border: 2px solid $colorRed;
+					}
+
+				}
+
+				.slick-arrow {
+					width: 100%;
+					height: 50px;
+				}
+
+				.slick-arrow.slick-prev {
+					background: url("../../Images/arrow-upper.svg") no-repeat center;
+					background-size: 30px;
+					@media (min-width: 1699px) {
+						background-size: 40px;
+					}
+					@media (min-width: $breakpointXL) {
+						background-size: 50px;
+						padding: 37px;
+					}
+				}
+
+				.slick-arrow.slick-next {
+					background: url("../../Images/arrow-lower.svg") no-repeat center;
+					background-size: 30px;
+					@media (min-width: 1699px) {
+						background-size: 40px;
+					}
+					@media (min-width: $breakpointXL) {
+						background-size: 50px;
+						padding: 37px;
+					}
+				}
+			}
+		}
+	}
+
+	//======Main section services======
+	.services {
+		color: $colorTextHead;
+		padding: 5px;
+		margin: 52px 0 44px 0;
+		@media (min-width: $breakpointMD) {
+			padding: 15px;
+			margin: 85px 0 67px 0;
+		}
+		@media (min-width: $breakpointLG) {
+			padding: 0;
+			margin: 70px 0 65px 0;
+			font-size: 23px;
+		}
+		@media (min-width: $breakpointXL) {
+			margin: 56px 0 149px 0;
+			padding: 0 3px;
+		}
+
+		//-----Services description--------
+		&__description {
+			font-weight: bold;
+			margin-bottom: 23px;
+			@media (min-width: $breakpointMD) {
+				margin-bottom: 34px;
+				letter-spacing: 1.7px;
+			}
+			@media (min-width: $breakpointLG) {
+				letter-spacing: 1.4px;
+			}
+			@media (min-width: $breakpointXL) {
+				letter-spacing: 1.2px;
+				margin-bottom: 32px;
+				padding-right: 500px;
+			}
+		}
+
+		&__list-title {
+			font-weight: bold;
+			letter-spacing: 1px;
+			margin-bottom: 5px;
+			@media (min-width: $breakpointMD) {
+				margin-bottom: 5px;
+				letter-spacing: 1.9px;
+			}
+			@media (min-width: $breakpointLG) {
+				letter-spacing: 1.3px;
+			}
+		}
+
+		&__list {
+			padding-left: 18px;
+			@media (min-width: $breakpointMD) {
+				margin-top: 7px;
+			}
+			@media (min-width: $breakpointLG) {
+				padding-left: 27px;
+			}
+
+			li {
+				padding-left: 11px;
+				letter-spacing: .4px;
+				@media (min-width: $breakpointMD) {
+					padding: 0 11px 2px 12px;
+					letter-spacing: 1.2px;
+				}
+				@media (min-width: $breakpointLG) {
+					padding: 0 0 0 15px;
+					letter-spacing: .5px;
+				}
+			}
+		}
+
+		&__wrap__bmg-red {
+			position: relative;
+			height: 186px;
+			@media (min-width: $breakpointMD) {
+				height: 167px;
+			}
+			@media (min-width: $breakpointLG) {
+				height: 100px;
+			}
+			@media (min-width: $breakpointXL) {
+				height: 124px;
+			}
+
+			img {
+				position: absolute;
+				width: 389px;
+				height: 192px;
+				left: 96px;
+				bottom: 0;
+				@media (min-width: $breakpointMD) {
+					width: 748px;
+					height: 383px;
+					left: 322px;
+					bottom: 9px;
+				}
+				@media (min-width: $breakpointLG) {
+					left: 423px;
+					bottom: -12px;
+				}
+				@media (min-width: $breakpointXL) {
+					width: 882px;
+					height: 438px;
+					left: 733px;
+					bottom: 1px;
+				}
+			}
+		}
+
+		&__contact-information {
+			margin-top: 23px;
+			height: 82px;
+			padding: 12px 47px;
+			text-align: center;
+			font-size: 13px;
+			font-weight: bold;
+			background-color: #fff;
+			color: #000;
+			border-bottom: 8px solid $colorRed;
+			@media (min-width: $breakpointMD) {
+				font-size: 17px;
+				padding: 12px 75px;
+			}
+			@media (min-width: $breakpointLG) {
+				height: 73px;
+				padding: 20px 35px;
+				letter-spacing: 1px;
+
+			}
+			@media (min-width: $breakpointXL) {
+				height: 100px;
+				padding: 29px;
+				font-size: 23px;
+				letter-spacing: 1.2px;
+			}
+		}
+	}
+
+	.reviews {
+		padding: 0 4px;
+		@media(min-width: $breakpointMD) {
+			padding: 0 13px;
+		}
+		@media (min-width: $breakpointLG) {
+			padding: 0;
+		}
+
+
+		&__title {
+			color: $colorRed;
+			font-size: 22px;
+			font-weight: bold;
+			letter-spacing: .8px;
+			@media(min-width: $breakpointMD) {
+				font-size: 33px;
+			}
+			@media (min-width: $breakpointXL) {
+				font-size: 49px;
+			}
+
+		}
+
+
+		.third-slider {
+			margin: 10px auto;
+			overflow: hidden;
+			@media(min-width: $breakpointMD) {
+				width: 93%;
+			}
+			@media (min-width: $breakpointXL) {
+				width: 86%;
+			}
+
+
+			.slick-track {
+				display: flex;
+
+				.slick-slide {
+					outline: none;
+					position: relative;
+				}
+
+
+				.third-slider__item {
+					@media (min-width: $breakpointMD) {
+						display: flex;
+					}
+
+
+					&__person-img {
+						padding: 25px 0 9px 0;
+						@media (min-width: $breakpointMD) {
+							padding: 60px 0 9px 0;
+							margin-right: 28px;
+						}
+						@media (min-width: $breakpointLG) {
+							margin-right: 37px;
+						}
+						@media (min-width: $breakpointXL) {
+							padding: 90px 0 9px 0;
+						}
+
+						img {
+							width: 85px;
+							height: 85px;
+
+							@media (min-width: $breakpointMD) {
+								width: 105px;
+								height: 105px;
+							}
+							@media (min-width: $breakpointXL) {
+								width: 110px;
+								height: 110px;
+							}
+						}
+
+					}
+
+					.third-slider__content {
+						@media (min-width: $breakpointMD) {
+							padding-top: 55px;
+							padding-right: 10px;
+						}
+						@media (min-width: $breakpointLG) {
+							padding-top: 53px;
+						}
+						@media (min-width: $breakpointXL) {
+							padding-top: 81px;
+						}
+					}
+
+					&__person-name {
+						margin: 0;
+						font-weight: bold;
+						letter-spacing: 1px;
+						color: $colorTextHead;
+						@media (min-width: $breakpointMD) {
+							font-size: 23px;
+						}
+					}
+
+					&__person-car {
+						color: $colorRed;
+						@media (min-width: $breakpointMD) {
+							font-size: 22px;
+						}
+
+					}
+
+					&__description {
+						color: $colorTextHead;
+					}
+				}
+			}
+		}
+
+		.third-slider__btn {
+			height: 137px;
+			display: flex;
+			justify-content: space-between;
+
+			@media(min-width: $breakpointMD) {
+				top: -175px;
+				position: relative;
+				margin-bottom: -34px;
+			}
+			@media (min-width: $breakpointLG) {
+				top: -210px;
+				height: 148px;
+			}
+
+		}
+
+		.slick-arrow {
+			z-index: 10;
+			font-size: 0;
+			border: none;
+			outline: none;
+			width: 50px;
+			height: 50px;
+		}
+
+
+		.slick-arrow.slick-prev {
+			background: url('../../Images/arrow-left-gray.svg') no-repeat;
+			background-size: 20px;
+			background-position: center left;
+			@media(min-width: $breakpointMD) {
+				background-size: 15px;
+			}
+			@media (min-width: $breakpointXL) {
+				background-size: 20px;
+			}
+		}
+
+		.slick-arrow.slick-next {
+			background: url("../../Images/arrow-right-gray.svg") no-repeat;
+			background-size: 20px;
+			background-position: center right;
+			@media(min-width: $breakpointMD) {
+				background-size: 15px;
+			}
+			@media (min-width: $breakpointXL) {
+				background-size: 20px;
+			}
+		}
+
+		.slick-disabled {
+			opacity: 0;
+			pointer-events: none;
+		}
+	}
+
+}
+
+#btn-top {
+	left: 6%;
+	z-index: 9999;
+	opacity: .7;
+	width: 50px;
+	bottom: 32px;
+	border: none;
+	height: 50px;
+	outline: none;
+	display: none;
+	position: fixed;
+	border-radius: 100%;
+	background-color: $colorRed;
+
+
+	.arrow-top {
+		top: 2px;
+		left: 11px;
+		width: 15px;
+		height: 15px;
+		position: relative;
+		border-top: 2px solid #9e9e9e;
+		border-right: 2px solid #9e9e9e;
+		transform: rotate(-45deg);
+	}
+
+
+}
+
+#btn-top:hover {
+	opacity: 1;
+}
+
+//==========Footer==========
+footer {
+	display: flex;
+	font-weight: bold;
+	line-height: 30px;
+	letter-spacing: 1px;
+	padding: 0 23px 0 0;
+	align-items: center;
+	color: $colorTextHead;
+	flex-direction: column;
+	justify-content: center;
+	@media (min-width: $breakpointMD) {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+	}
+
+	@media(min-width: $breakpointLG) {
+		font-size: 20px;
+		padding: 11px 0 0 0;
+		letter-spacing: 1.5px;
+	}
+
+	@media(min-width: $breakpointXL) {
+		padding: 2px 30px 0 0;
+	}
+	//-------Footer contacts-------
+	.footer__contacts {
+		display: flex;
+		padding: 49px 0 0 0;
+		flex-direction: column;
+
+		@media (min-width: $breakpointMD) {
+			padding: 49px 40px 0 0;
+		}
+
+		@media(min-width: $breakpointXL) {
+			width: 72%;
+			height: 173px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-end;
+		}
+
+		div {
+			margin: 0 0 13px 0;
+			cursor: pointer;
+		}
+
+		i {
+			font-size: 23px;
+			color: $colorRed;
+			padding: 13px 19px 3px 0;
+
+			@media(min-width: $breakpointLG) {
+				font-size: 26px;
+				padding: 5px 20px 3px 0;
+			}
+
+		}
+
+	}
+
+	//--------Footer logo----------
+	.footer-logo {
+		padding: 50px 0;
+
+		@media (min-width: $breakpointMD) {
+			padding: 4px 0 0 13px;
+		}
+
+		@media(min-width: $breakpointXL) {
+			padding: 80px 0 0 5px;
+		}
+
+		p {
+			text-transform: uppercase;
+			text-align: center;
+			margin-top: 16px;
+			@media (min-width: $breakpointMD) {
+				text-align: left;
+				padding-top: 10px;
+			}
+			@media(min-width: $breakpointXL) {
+				padding-top: 18px;
+			};
+
+		}
+
+	}
+
+}
+
+
+
+
